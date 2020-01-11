@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Query Submission Form</title>
+    <style>
+        form input {
+            display: block;
+            margin: 5px 0;
+        }
+        form {
+            width: 200px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submission" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <label for="ip">IP Address</label>
+        <input type="text" name="ip" id="ip">
+        <label for="database">Database name</label>
+        <input type="text" name="database" id="database">
+        <label for="object">Object</label>
+        <input type="text" name="object" id="object">
+        <label for="rows">Rows to return</label>
+        <input type="number" name="rows" id="rows">
+        <label for="options">options ("where [id] = '12'")</label>
+        <input type="text" name="options" id="options">
+        <label for="submit">Submit Query</label>
+        <input type="submit" value="Go!" id="submit">
+    </form>
+    
+</body>
+</html>
