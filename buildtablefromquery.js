@@ -10,9 +10,7 @@ const runSql = async (username, password, ip, database, object, rows, filter) =>
       } else {
           query = `select top ${rows} * from ${object}`
       }
-      
-      // let html2 = fs.readFileSync(path.join(__dirname, 'table_template.html'), 'utf8')
-      // core Node API support promises from v11
+
       let html = await fs.readFile(path.join(__dirname, 'table_template.html'), 'utf8')
       html += `<h2>Results as a Table for ${query}</h2>`
 
