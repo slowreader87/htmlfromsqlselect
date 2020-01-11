@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.post('/submission', async (req, res, next) => {
     const {username, password, ip, database, object, rows, options} = req.body
     const html = await runSql(username, password, ip, database, object,rows, options)
-    //res.sendFile(path.join(__dirname,'table.html'))
     res.send(html)
 })
 
